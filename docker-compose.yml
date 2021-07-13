@@ -1,5 +1,11 @@
 version: "3.0"
 services:
+    app:
+        build: ./app
+        ports:
+            - 80:80
+        volumes:
+            - ./app/src:/var/www
     db:
         image: mysql:5.7
         platform: linux/x86_64
@@ -11,4 +17,3 @@ services:
             - 3306:3306
         volumes:
             - ./mysql_data:/var/lib/mysql
-            
