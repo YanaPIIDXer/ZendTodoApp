@@ -13,9 +13,4 @@ RUN composer self-update 1.2.0
 RUN yes | pecl install xdebug 
 
 WORKDIR /var/www
-
-ADD ./src/composer.json /var/www
-ADD ./src/composer.lock /var/www
-RUN composer install
-
 ADD ./src /var/www
