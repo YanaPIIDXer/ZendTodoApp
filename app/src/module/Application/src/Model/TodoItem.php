@@ -8,8 +8,8 @@ class TodoItem
 
     public function __construct($name, $body)
     {
-        $this->$name = $name;
-        $this->$body = $body;
+        $this->name = $name;
+        $this->body = $body;
     }
 }
 ?>
