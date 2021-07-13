@@ -12,3 +12,9 @@ RUN apt-get update \
 RUN yes | pecl install xdebug 
 
 WORKDIR /var/www
+
+ADD ./src/composer.json /var/www
+ADD ./src/composer.lock /var/www
+RUN composer install
+
+ADD ./src /var/www
