@@ -1,2 +1,16 @@
 <h1>TODOアプリ</h1>
 <hr />
+
+<table border="1" class="table">
+    <thead>
+        <tr><th>タイトル</th><th>本文</th></tr>
+    </thead>
+    <tbody>
+        <?php foreach ($items as $item) { ?>
+            <tr>
+                <td><?= $item->name; ?></td>
+                <td><?= $item->body; ?></td>
+            </tr>
+        <?php } ?>
+    </tbody>
+</table>
